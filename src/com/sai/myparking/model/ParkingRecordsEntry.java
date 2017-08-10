@@ -22,6 +22,56 @@ public class ParkingRecordsEntry {
 	}
 	
 	
+	public Car getCar() {
+		return car;
+	}
+
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
+
+
+	public void setEnteredAt(LocalDateTime enteredAt) {
+		this.enteredAt = enteredAt;
+	}
+
+
+	public void setTicket(Ticket ticket) {
+		this.ticket = ticket;
+	}
+
+
+	public void setLeftAt(LocalDateTime leftAt) {
+		this.leftAt = leftAt;
+	}
+
+
+	public void setSlot(Slot slot) {
+		this.slot = slot;
+	}
+
+
+	public LocalDateTime getEnteredAt() {
+		return enteredAt;
+	}
+
+
+	public Ticket getTicket() {
+		return ticket;
+	}
+
+
+	public LocalDateTime getLeftAt() {
+		return leftAt;
+	}
+
+
+	public Slot getSlot() {
+		return slot;
+	}
+
+
 	@Override
 	public String toString() {
 		return "ParkingRecordsEntry [car=" + car + ", enteredAt=" + enteredAt

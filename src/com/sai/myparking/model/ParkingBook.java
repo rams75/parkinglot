@@ -16,12 +16,12 @@ public class ParkingBook {
 		entries = entry;
 	}
 
-	public List<ParkingRecordsEntry> getEntry() {
+	public List<ParkingRecordsEntry> getEntries() {
 		return entries;
 	}
 
-	public void setEntry(List<ParkingRecordsEntry> entry) {
-		this.entries = entry;
+	public void setEntries(List<ParkingRecordsEntry> entries) {
+		this.entries = entries;
 	}
 	
 	public List<ParkingRecordsEntry> addEntryToBook(ParkingRecordsEntry entry) {

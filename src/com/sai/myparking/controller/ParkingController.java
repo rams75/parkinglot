@@ -80,16 +80,28 @@ public class ParkingController {
 	}
 
 
-	public void leaveCar(int slotNumber, List<Slot> slots) {
+	public boolean leaveCar(int slotNumber, List<Slot> slots) {
 		
 		for(Slot slot: slots) {
-			if(slot.getNumber().equals(slotNumber)) {
+			if(slot.getNumber().equals(slotNumber) && slot.getIsOccupied()) {
 				slot.setIsOccupied(false);
 				slot.setCar(null);
-				break;
+				return true;
 			}
 
-		}		
+		}
+		return false;
+	}
+
+
+	public void showParkingArea(List<Slot> slots) {
+				
+		slots.stream()
+			.filter(slot -> slot.getCar() != null)
+			.forEach(slot -> System.out.println("Slot: " + slot.getNumber() + " Car: " + slot.getCar().getRegistrationNumber()));
+		
+		
+		
 	} 
 	
 	
